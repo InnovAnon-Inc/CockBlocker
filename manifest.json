@@ -16,14 +16,13 @@
 
   "permissions"     : ["contextMenus"],
   "background"      : {
-    "scripts"   : ["background.js"],
-    "persistent": false
+    "scripts"   : ["opencv-4.5.0.js", "background.js"]
   },
   
   "content_scripts" : [
     {
       "matches"          : ["<all_urls>"],
-      "js"               : ["cockblocker.js"],
+      "js"               : ["opencv-4.5.0.js", "content.js"],
       "match_about_blank": true,
       "all_frames"       : true
     }

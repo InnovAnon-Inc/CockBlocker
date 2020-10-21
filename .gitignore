@@ -1,2 +1,10 @@
+# third party code
+opencv*.js
+
+# source images for logo
 No_circle.svg.png
 Twemoji_1f346.svg.png
+
+# API keys
+*.key
+
