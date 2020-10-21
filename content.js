@@ -9,9 +9,12 @@
 // TODO on image load, check image, replace as necessary
 // TODO replace placeholders
 
+console.log ('cbt exec content.js');
+
 var imgs = document.images;
 for (var i = 0, iLen = imgs.length; i < iLen; i++) {
   let img = imgs[i];
+  console.log ('cbt replacing image ' + img.src);
   //img.onload = function () {
     //let mat = cv.imread (img);
     //cv.imshow ('canvasOutput', mat);
@@ -22,3 +25,5 @@ for (var i = 0, iLen = imgs.length; i < iLen; i++) {
   //  img.onload = function () {}
   //}
 }
+
+console.log ('cbt images replaced');
