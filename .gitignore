@@ -8,3 +8,6 @@ Twemoji_1f346.svg.png
 # API keys
 *.key
 
+# release dir
+web-ext-artifacts
+
