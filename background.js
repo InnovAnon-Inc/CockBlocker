@@ -34,6 +34,8 @@ browser.contextMenus.onClicked.addListener (function (info, tab) {
 
 console.log ('cbt click listeners added');
 
+// browser.webNavigation.onHistoryStateUpdated.addListener
+
 // TODO separate page for managing app, including:
 // - download/upload datasets
 // - train AI to update model

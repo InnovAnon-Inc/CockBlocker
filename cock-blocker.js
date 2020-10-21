@@ -11,19 +11,20 @@
 
 console.log ('cbt exec content.js');
 
+// guard to prevent re-running
+if (window.hasRun) { return; }
+window.hasRun = true;
+
 var imgs = document.images;
 for (var i = 0, iLen = imgs.length; i < iLen; i++) {
   let img = imgs[i];
   console.log ('cbt replacing image ' + img.src);
-  //img.onload = function () {
-    //let mat = cv.imread (img);
-    //cv.imshow ('canvasOutput', mat);
-    //mat.delete ();
-    // if cv_src is not dick pic: return
-    img.src = 'replacement.png';
-    
-  //  img.onload = function () {}
-  //}
+  //let mat = cv.imread (img);
+  //cv.imshow ('canvasOutput', mat);
+  //mat.delete ();
+  // if cv_src is not dick pic: return
+  let repl = browser.extension.getURL ('replacement.png')
+  img.setAttribute ('src', repl);
 }
 
 console.log ('cbt images replaced');

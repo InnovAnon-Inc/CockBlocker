@@ -11,3 +11,9 @@ Contrasting with other ad blocking implementations,
 which typically use a blacklist of known ads,
 this one addresses never-before-seen "ads,"
 so you never have to see them.
+
+# Update
+Project Abandoned
+----------
+Error loading opencv.js.
+Appears to be a problem with CSP + eval
