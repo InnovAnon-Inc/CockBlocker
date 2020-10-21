@@ -12,6 +12,13 @@ which typically use a blacklist of known ads,
 this one addresses never-before-seen "ads,"
 so you never have to see them.
 
+# Usage
+Common Operations
+----------
+- Regenerate icons     : ```./logo.sh```
+- Download dependencies: ```./deps.sh```
+- Release software     : ```./release.sh```
+
 # Update
 Project Abandoned
 ----------
