@@ -17,6 +17,7 @@ console.log ('cbt exec content.js');
 
 function replaceImages () {
   console.log ('cbt replaceImages ()');
+  if (cv == undefined) { return; }
   var imgs = document.images;
   var repl = browser.extension.getURL ('replacement.png')
   for (var i = 0, iLen = imgs.length; i < iLen; i++) {
@@ -26,17 +27,23 @@ function replaceImages () {
     console.log ('cbt checking image 2');
     let mat = cv.imread (img);
     console.log ('opencv read img');
-    //cv.imshow ('canvasOutput', mat);
-    if (true) { // is a dick pic
+    let dp  = true;
+    //dp = cv.imshow ('canvasOutput', mat);
+    if (dp) { // is a dick pic
       console.log ('cbt dick pic detected');
       img.setAttribute ('src', repl);
       console.log ('cbt image replaced');
-    }
+    } else { console.log ('cbt image not replaced'); }
     mat.delete ();
     console.log ('opencv free mem');
   }
 }
 replaceImages ();
+
+document.onreadystatechange = function () {
+  console.log ('browser state changed');
+  replaceImages ();
+}
 
 //browser.onStateChanged ()
 
