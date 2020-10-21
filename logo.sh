@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
 set -euxo pipefail
+# Generate project logo
 
 BOT=Twemoji_1f346.svg.png
 TOP=No_circle.svg.png

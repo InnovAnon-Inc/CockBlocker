@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
 set -euxo pipefail
+# Release project
 
 KEY=jwt.key
 A="`head -n 1 $KEY`"
