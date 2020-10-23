@@ -25,7 +25,7 @@ function replaceImages () {
     console.log ('cbt checking image 1 ' + img.src);
     if (img.src == repl) { continue; }
     console.log ('cbt checking image 2');
-    let mat = cv.imread (img);
+    let mat = cv.imread (img); // TODO this line breaks it
     console.log ('opencv read img');
     let dp  = true;
     //dp = cv.imshow ('canvasOutput', mat);
